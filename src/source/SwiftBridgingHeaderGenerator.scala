@@ -27,8 +27,8 @@ class SwiftBridgingHeaderGenerator(spec: Spec) extends Generator(spec) {
   override def generateEnum(origin: String, ident: Ident, doc: Doc, e: Enum) {
     spec.objcSwiftBridgingHeaderWriter.get.write("#import \"" + marshal.headerName(ident) + "\"\n")
   }
-
-  override def generateInterface(origin: String, ident: Ident, doc: Doc, typeParams: Seq[TypeParam], i: Interface) {
+  
+  override def generateInterface(idl: Seq[TypeDecl], origin: String, ident: Ident, doc: Doc, typeParams: Seq[TypeParam], i: Interface) {
     spec.objcSwiftBridgingHeaderWriter.get.write("#import \"" + marshal.headerName(ident) + "\"\n")
   }
 

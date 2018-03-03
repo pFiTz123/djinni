@@ -42,6 +42,8 @@ public abstract class VarnameInterface {
             super.finalize();
         }
 
+        // VarnameInterface methods
+
         @Override
         public VarnameRecord Rmethod(VarnameRecord RArg)
         {
