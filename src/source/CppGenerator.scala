@@ -315,7 +315,7 @@ class CppGenerator(spec: Spec) extends Generator(spec) {
       writeDoc(w, doc)
       writeCppTypeParams(w, typeParams)
 
-      val extendsDef = if (superNametype.isDefined) " : public " + superNametype.get else ""
+      val extendsDef = if (superNametype.isDefined) " : virtual public " + superNametype.get else ""
       w.w(s"class $self$extendsDef").bracedSemi {
         w.wlOutdent("public:")
         // Destructor
